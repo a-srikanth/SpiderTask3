@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.moviepeel.DetailsActivity">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingLeft="20dp"
+            android:background="#FF6D00"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="Movie Title with auto scrolling enabled"
+            android:textSize="48sp"
+            android:textColor="#FFFFFF"
+            android:singleLine="true"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:src="@drawable/sample_batman"
+            android:layout_width="185dp"
+            android:layout_height="275dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/movie_title"
+            android:onClick="showFullImage"/>
+
+        <TextView
+            android:id="@+id/movie_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:text="2016"
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/movie_image"
+            android:layout_below="@id/movie_title"/>
+
+        <TextView
+            android:id="@+id/movie_genre_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genre: "
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_alignStart="@id/movie_year"
+            android:layout_alignLeft="@id/movie_year"
+            android:layout_below="@id/movie_year" />
+
+        <TextView
+            android:id="@+id/movie_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genres "
+            android:textSize="16sp"
+            android:layout_alignStart="@id/movie_genre_title"
+            android:layout_alignLeft="@id/movie_genre_title"
+            android:layout_below="@id/movie_genre_title" />
+
+        <TextView
+            android:id="@+id/movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textStyle="italic"
+            android:text="IMDB Rating: "
+            android:textSize="18sp"
+            android:layout_below="@id/movie_genre"
+            android:layout_alignLeft="@id/movie_genre"
+            android:layout_alignStart="@id/movie_genre"
+            />
+
+        <Button
+            android:id="@+id/add_to_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF6D00"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="25dp"
+            android:text="Mark As Favourite"
+            android:singleLine="false"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@id/movie_rating"
+            android:layout_below="@id/movie_rating"
+            android:onClick="insert"/>
+
+        <TextView
+            android:id="@+id/plot_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:text="PLOT"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:singleLine="false"
+            android:layout_below="@id/movie_image"/>
+
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#9E9E9E"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_below="@id/plot_title"/>
+
+        <TextView
+            android:id="@+id/movie_plot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="This is the movie plot"
+            android:textSize="18sp"
+            android:singleLine="false"
+            android:layout_below="@id/separator1"/>
+
+    </RelativeLayout>
+</ScrollView>
